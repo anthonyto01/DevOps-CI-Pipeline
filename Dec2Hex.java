@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//test comment
+
 //this is just a test comment
 class Dec2Hex
 {
