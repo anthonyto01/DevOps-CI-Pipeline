@@ -1,6 +1,6 @@
 import java.util.Scanner;
 //adding a comment
-
+//adding another comment
 class Dec2Hex
 {
 
