@@ -25,33 +25,24 @@ class Dec2Hex
 
     }
 
-
-    public static int checkInput () {
+    public static Scanner checkInput () {
         Scanner input = new Scanner (System.in);
-        int  input = input.nextLine();
-        boolean intinput = input.chars().allMatch(Character::isInteger);
 
-        //Returns error message if the input is empty
-        try {
-            if input.isEmpty() || input.equals ("")){
-                System.out.println("Invalid Input");
-                return;
+        if(input.hasNextInt()){
+            return input;
+        } else{
+            //Returns error message if input is a non integer
+            System.out.println("Please input Integers only!");
+        }
+        
+        try{
+            if (input.equals ("")){
+                //Returns error message if the input is empty    
+                System.out.println("Please enter an Integer!");
             }
-        }
-    
-        //Allows integer inputs to be converted
-        if (intinput) {
-            inputline = Integer.parseInteger(input);
-        } else {
-            System.out.println("Please input Integer inputs only!");
-            return;
-        }
-
-        //Returns message if input is a negative integer
-        if (intinput < 0){
-            System.out.println("Please input a positive Integer!");
-            return;
-        }
-    }
+        }catch (InputMismatchException e){
+    }      
+        return input;
+    }      
 }
 
