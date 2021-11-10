@@ -25,5 +25,18 @@ class Dec2Hex
         System.out.println("Hexadecimal representation is: " + hexadecimal);
 
     }
+
+   public static int checkInput () {
+        Scanner input = new Scanner (System.in);
+        int input = input.nextLine();
+        boolean intinput = input.chars().allMatch(Character::isInteger);
+
+        //Returns error message if the input is empty
+        try {
+            if input.isEmpty() || input.equals ("")){
+                System.out.println("Invalid Input");
+                return;
+            }
+        }
 }
 
