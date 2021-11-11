@@ -33,15 +33,7 @@ class Dec2Hex
         } else{
             //Returns error message if input is a non integer
             System.out.println("Please input Integers only!");
-        }
-        
-        try{
-            if (input.equals ("")){
-                //Returns error message if the input is empty    
-                System.out.println("Please enter an Integer!");
-            }
-        }catch (InputMismatchException e){
-    }      
+        }      
         return input;
     }      
 }
